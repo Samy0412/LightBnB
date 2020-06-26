@@ -1,5 +1,5 @@
-const properties = require("./json/properties.json");
-const users = require("./json/users.json");
+const properties = require("../json/properties.json");
+const users = require("../json/users.json");
 const { Pool } = require("pg");
 
 const pool = new Pool({
@@ -213,4 +213,3 @@ const addProperty = function (property) {
     .catch((err) => console.error("query error", err.stack));
 };
 exports.addProperty = addProperty;
-()
